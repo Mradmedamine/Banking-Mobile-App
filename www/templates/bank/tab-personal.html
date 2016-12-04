@@ -1,0 +1,33 @@
+<ion-view view-title="Personal Details">
+  <ion-content>
+
+    <div class="bar bar-header bar-custom long">
+      <h1 class="balance">{{user.login}}</h1>
+    </div>
+
+    <div class="list" style="padding-top: 77px;">
+
+      <a class="item"> First Name :
+        <div class="rightalign"> {{user.firstname}}</div>
+      </a>
+
+      <a class="item"> Last Name :
+        <div class="rightalign"> {{user.lastname}}</div>
+      </a>
+
+      <a class="item"> Address :
+        <div class="rightalign"> {{user.Address}}</div>
+      </a>
+
+      <a class="item"> Email :
+        <div class="rightalign"> {{user.email}}</div>
+      </a>
+
+      <a class="item"> BirthDate :
+        <div class="rightalign"> {{user.birthDate| date:'MMM d, y'}}</div>
+      </a>
+
+    </div>
+
+  </ion-content>
+</ion-view>

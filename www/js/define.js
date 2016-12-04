@@ -1,0 +1,1 @@
+var pathRacine="http://bankapi.herokuapp.com";

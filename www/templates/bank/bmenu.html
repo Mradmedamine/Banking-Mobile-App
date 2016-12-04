@@ -1,0 +1,70 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon  ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+
+        <button class="button button-icon1 ion-edit" style="font-size:23px !important;" ng-show="editbutton"
+                ng-click="edit()" menu-toggle="right">
+        </button>
+
+        <button class="button button-icon1 ion-loop" style="font-size:27px !important;" ng-show="switchButton"
+                ng-click="switchAccount()" menu-toggle="right">
+        </button>
+
+        <button class="button button-icon1 ion-share" style="font-size:27px !important;" ng-show="exportButton"
+                ng-click="exportPDF()" menu-toggle="right">
+        </button>
+
+      </ion-nav-buttons>
+
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu width="200" side="left" class="dark-bg ">
+    <ion-content>
+      <ion-list class="stable-border">
+
+        <ion-item class="item-dark item-icon-left" menu-close href="#/home/account/business">
+          <i class="icon ion-ios-gear"></i>
+          <i class="menu-label"> Account </i>
+        </ion-item>
+
+
+        <ion-item class="item-dark item-icon-left" menu-close href="#/home/transfers">
+          <i class="icon  ion-arrow-swap"></i>
+          <i class="menu-label"> Transfer </i>
+        </ion-item>
+
+        <ion-item class="item-dark item-icon-left" menu-close href="#/home/history">
+          <i class="icon ion-ios-clock"></i>
+          <i class="menu-label"> History </i>
+        </ion-item>
+
+        <ion-item class="item-dark item-icon-left" menu-close href="#/home/locations">
+          <i class="icon ion-ios-location"></i>
+          <i class="menu-label"> Locations </i>
+        </ion-item>
+
+        <ion-item class="item-dark item-icon-left" menu-close href="#/home/contact">
+          <i class="icon ion-android-contact"></i>
+          <i class="menu-label"> Contact </i>
+        </ion-item>
+
+        <ion-item class="item-dark  item-icon-left" menu-close ng-click="logout()">
+          <i class="icon1 ion-power"></i>
+          <i class="menu-label1"> Log out </i>
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

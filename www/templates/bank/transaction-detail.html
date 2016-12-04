@@ -1,0 +1,30 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">{{transaction.description}}</h1>
+
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeTransaction()">Close</button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content>
+    <ul class="list">
+      <li class="item">
+        <h2> Transaction : {{transaction.description}} </h2>
+      </li>
+      <li class="item">
+        Type : {{transaction.type}}
+      </li>
+      <li class="item">
+        Amount :{{transaction.amount}} $
+      </li>
+      <li class="item">
+        Balance : {{transaction.balance}} $
+      </li>
+      <li class="item">
+        Date : {{transaction.date| date:'MMM d, y hh:mm a'}}
+      </li>
+    </ul>
+  </ion-content>
+
+</ion-modal-view>

@@ -1,0 +1,32 @@
+<ion-view view-title="Business Details">
+  <ion-content>
+
+    <div class="bar bar-header bar-custom long">
+      <h1 class="balance">{{CurrentAccount.balance}}$</h1>
+    </div>
+
+    <div class="list" style="padding-top: 74px;">
+
+      <div class="item item-divider">
+        Current statement activities
+      </div>
+      <a class="item"> Current Balance
+        <div class="rightalign"> {{CurrentAccount.balance}}</div>
+      </a>
+      <a class="item"> Last Payment
+        <div class="rightalign"> {{CurrentAccount.lastpayment}}</div>
+      </a>
+      <a class="item"> Last Payment Date
+        <div class="rightalign"> {{CurrentAccount.lastpaymentdate| date:'MMM d, y hh:mm'}}</div>
+      </a>
+      <a class="item"> Card Number
+        <div class="rightalign"> 3745 9039 7512 1850</div>
+      </a>
+      <a class="item"> IBAN
+        <div class="rightalign"> {{CurrentAccount.iban}}</div>
+      </a>
+
+    </div>
+
+  </ion-content>
+</ion-view>

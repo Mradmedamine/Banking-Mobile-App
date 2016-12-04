@@ -1,0 +1,19 @@
+<ion-view view-title="History">
+  <ion-content>
+
+    <div class="list">
+      <a class="item item-button-left item-button-right" style="height:85px;"
+         ng-repeat="transaction in transactions | orderBy:'-' " ng-click="showTransaction(transaction)">
+        <i class="icon ion-social-usd" style="position:absolute;padding-top:8px"
+           ng-if="transaction.type=='deposit' "> </i>
+        <i class="icon ion-social-usd-outline" style="position:absolute;padding-top:8px"
+           ng-if="transaction.type=='withrawal' "> </i>
+        <span style="padding-left: 40px;position:absolute;padding-top:4px">   {{transaction.description}} </span>
+        <p style="padding-left: 50px;position:absolute;padding-top:28px">{{transaction.amount}} $ - {{transaction.date|
+          date:'MMM d, y'}} </p>
+        <i class="button2 ion-ios-arrow-right" style="font-size: 29px;"></i>
+      </a>
+    </div>
+
+  </ion-content>
+</ion-view>

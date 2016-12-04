@@ -1,0 +1,38 @@
+<ion-view view-title="Money Transfer">
+  <ion-content>
+
+    <div class="bar bar-header bar-custom long" style="padding-top: 20px;">
+      <h1 class="balance">{{CurrentAccount.balance}}$</h1>
+    </div>
+
+    <form ng-submit="transfer()">
+
+      <div class="list" style="padding-top: 90px;">
+        <div class="style1" style="padding-bottom:30px !important;padding-left: 15px !important;"> Transfer To</div>
+
+        <label class="item item-input">
+          <span class=" input-label style1"> IBAN :  </span>
+          <input type="text" class="style2" style="padding-right:50px !important;" ng-model="transfer.iban">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label style1" style="height:18px;"> </span>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label style1"> Amount</span>
+          <input type="text" class="style2" ng-model="transfer.amount">
+          <span style="padding-right:50px; color:#444;font-size:24px;"> $ </span>
+        </label>
+
+      </div>
+
+      <label class="item">
+        <button class="button button-block button-positive" style="background-color: #009689 !important;" type="submit">
+          Transfer
+        </button>
+      </label>
+
+    </form>
+  </ion-content>
+</ion-view>
